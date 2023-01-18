@@ -1,0 +1,121 @@
+
+
+# Clock 50MHz input
+NET "Clock" LOC = AB13;
+NET "Clock" IOSTANDARD = LVCMOS33;
+NET "clock" TNM_NET = "clock";
+TIMESPEC TS_clock = PERIOD "clock" 20 ns HIGH 50 %;
+
+# LEDs
+#NET "LEDs[0]" LOC = AA21;
+#NET "LEDs[0]" IOSTANDARD = LVCMOS33;
+#NET "LEDs[1]" LOC = AB21;
+#NET "LEDs[1]" IOSTANDARD = LVCMOS33;
+#NET "LEDs[2]" LOC = V17;
+#NET "LEDs[2]" IOSTANDARD = LVCMOS33;
+#NET "LEDs[3]" LOC = W17;
+#NET "LEDs[3]" IOSTANDARD = LVCMOS33;
+#
+### Ethernet PHY B Interface
+#NET "rgmii_txd[3]" LOC = AB17 | IOSTANDARD = LVCMOS33 | SLEW = FAST;
+#NET "rgmii_txd[2]" LOC = AA14 | IOSTANDARD = LVCMOS33 | SLEW = FAST;
+#NET "rgmii_txd[1]" LOC = Y16  | IOSTANDARD = LVCMOS33 | SLEW = FAST;
+#NET "rgmii_txd[0]" LOC = W15  | IOSTANDARD = LVCMOS33 | SLEW = FAST;
+#NET "rgmii_tx_ctl" LOC = Y17  | IOSTANDARD = LVCMOS33 | SLEW = FAST;
+#NET "rgmii_txc" LOC = Y13     | IOSTANDARD = LVCMOS33 | SLEW = FAST;
+#NET "rgmii_rxd[0]" LOC = W14  | IOSTANDARD = LVCMOS33;
+#NET "rgmii_rxd[1]" LOC = AB16 | IOSTANDARD = LVCMOS33;
+#NET "rgmii_rxd[2]" LOC = AA16 | IOSTANDARD = LVCMOS33;
+#NET "rgmii_rxd[3]" LOC = W13  | IOSTANDARD = LVCMOS33;
+#NET "rgmii_rx_ctl" LOC = V13  | IOSTANDARD = LVCMOS33;
+#NET "rgmii_rxc" LOC = Y12     | IOSTANDARD = LVCMOS33;
+#NET "RST_phy" LOC = V15       | IOSTANDARD = LVCMOS33;
+#
+#NET "rgmii_txd[?]" DRIVE = 12;
+#NET "rgmii_rx_ctl" DRIVE = 12;
+#
+#NET "rgmii_rxc" TNM_NET = "rgmii_rxc";
+#TIMESPEC TS_rgmii_rxc = PERIOD "rgmii_rxc" 8 ns HIGH 50 %;
+#
+#INST "rgmii_rxd*"   TNM    = IN_RGMII; 
+#INST "rgmii_rx_ctl" TNM    = IN_RGMII;
+#TIMEGRP "IN_RGMII" OFFSET  = IN 1 ns VALID 3 ns BEFORE "rgmii_rxc" RISING; 
+#TIMEGRP "IN_RGMII" OFFSET  = IN 1 ns VALID 3 ns BEFORE "rgmii_rxc" FALLING;
+#
+############## AD7606 ###############
+#
+#NET "DB[0]" LOC = L17;
+#NET "DB[1]" LOC = F21;
+#NET "DB[2]" LOC = J17;
+#NET "DB[3]" LOC = E20;
+#NET "DB[4]" LOC = H19;
+#NET "DB[5]" LOC = T19;
+#NET "DB[6]" LOC = H20;
+#NET "DB[7]" LOC = G20;
+#NET "DB[8]" LOC = G22;
+#NET "DB[9]" LOC = J19;
+#NET "DB[10]" LOC = T20;
+#NET "DB[11]" LOC = H18;
+#NET "DB[12]" LOC = E22;
+#NET "DB[13]" LOC = K17;
+#NET "DB[14]" LOC = F22;
+#NET "DB[15]" LOC = K18;
+#
+#
+#NET "ADC_busy" LOC = K20;
+#NET "RD" LOC = K19;
+#NET "Reset" LOC = H21;
+#NET "CONVST_AB" LOC = H22;
+#NET "DB[15]" IOSTANDARD = LVCMOS33;
+#NET "DB[14]" IOSTANDARD = LVCMOS33;
+#NET "DB[10]" IOSTANDARD = LVCMOS33;
+#NET "DB[9]" IOSTANDARD = LVCMOS33;
+#NET "DB[8]" IOSTANDARD = LVCMOS33;
+#NET "DB[13]" IOSTANDARD = LVCMOS33;
+#NET "DB[11]" IOSTANDARD = LVCMOS33;
+#NET "DB[12]" IOSTANDARD = LVCMOS33;
+#NET "DB[7]" IOSTANDARD = LVCMOS33;
+#NET "DB[6]" IOSTANDARD = LVCMOS33;
+#NET "DB[5]" IOSTANDARD = LVCMOS33;
+#NET "DB[4]" IOSTANDARD = LVCMOS33;
+#NET "DB[3]" IOSTANDARD = LVCMOS33;
+#NET "DB[2]" IOSTANDARD = LVCMOS33;
+#NET "DB[1]" IOSTANDARD = LVCMOS33;
+#NET "DB[0]" IOSTANDARD = LVCMOS33;
+#NET "ADC_busy" IOSTANDARD = LVCMOS33;
+#NET "RD" IOSTANDARD = LVCMOS33;
+#NET "CONVST_AB" IOSTANDARD = LVCMOS33;
+#NET "Reset" IOSTANDARD = LVCMOS33;
+#
+###############SPI interface with external MCU as an slave.##############
+#
+#NET "cs" LOC = C5;
+#NET "miso" LOC = D6;
+#NET "mosi" LOC = B6;
+#NET "sclk" LOC = C7;
+#
+#
+#
+#NET "miso" IOSTANDARD = LVCMOS33;
+#NET "cs" IOSTANDARD = LVCMOS33;
+#NET "mosi" IOSTANDARD = LVCMOS33;
+#NET "sclk" IOSTANDARD = LVCMOS33;
+#
+#
+# ##### Operation Mode ###### 
+#NET "OperationMode" LOC = B8;
+#NET "OperationMode" IOSTANDARD = LVCMOS33;
+#
+# ##TIMESPEC TS_2CLKS = FROM TS_CLK_Gen_clkfx TO TS_CLK_Gen_clk2x 10ns; 
+#
+#############################################################################
+## VCC AUX VOLTAGE 
+#############################################################################
+#CONFIG VCCAUX  = 2.5;
+#
+#
+#
+#
+#
+#
+#
