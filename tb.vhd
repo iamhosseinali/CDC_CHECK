@@ -54,7 +54,7 @@ ARCHITECTURE behavior OF tb IS
    signal num_out : std_logic_vector(7 downto 0);
 
    -- Clock period definitions
-   constant Clock_period : time := 10 ns;
+   constant Clock_period : time := 20 ns;
  
 BEGIN
  

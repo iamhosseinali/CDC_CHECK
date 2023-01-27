@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "D:/Hosseinali/Mahda_project/CDC_test/tb_isim_beh.exe" -prj "D:/Hosseinali/Mahda_project/CDC_test/tb_beh.prj" "work.tb" 
+-intstyle "ise" -incremental -lib "secureip" -o "F:/Edu/FPGA/CDC/tb_isim_par.exe" -prj "F:/Edu/FPGA/CDC/tb_par.prj" "work.tb" 

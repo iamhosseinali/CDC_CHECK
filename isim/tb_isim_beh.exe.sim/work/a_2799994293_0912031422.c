@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Hosseinali/Mahda_project/CDC_test/ipcore_dir/dcm.vhd";
+static const char *ng0 = "F:/Edu/FPGA/CDC/ipcore_dir/dcm.vhd";
 
 
 

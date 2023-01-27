@@ -21,7 +21,7 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "D:/Hosseinali/Mahda_project/CDC_test/top.vhd";
+static const char *ng0 = "F:/Edu/FPGA/CDC/top.vhd";
 extern char *IEEE_P_2592010699;
 extern char *IEEE_P_1242562249;
 
@@ -93,7 +93,7 @@ LAB1:    return;
 LAB2:    xsi_set_current_line(88, ng0);
     t4 = (t0 + 1832U);
     t5 = *((char **)t4);
-    t4 = (t0 + 6888U);
+    t4 = (t0 + 6552U);
     t6 = ieee_p_1242562249_sub_1919365254_1035706684(IEEE_P_1242562249, t3, t5, t4, 1);
     t7 = (t3 + 12U);
     t8 = *((unsigned int *)t7);

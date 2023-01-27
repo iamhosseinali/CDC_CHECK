@@ -1,0 +1,24 @@
+#:C0     
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   F:\Edu\FPGA\CDC
+#Date/Time:
+#:T   Wed Jan 18 20:01:01 2023
+#------------------------------
+	#Reading top.ncd...
+	#Loading device for application Rf_Device from file '6slx45.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "top" is an NCD, version 3.2, device xc6slx45, package fgg484, speed -2
+	#Design creation date: 2023.01.18.15.24.43
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+select site 'TIEOFF_X26Y138'
+	#site "TIEOFF_X26Y138",  type = TIEOFF  (RPM grid X60Y276)
+	#4
+unselect -all

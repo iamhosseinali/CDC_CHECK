@@ -1,0 +1,12 @@
+Command line:
+   tb_isim_par.exe
+     -simmode  gui
+     -sdfmax  /uut/=netgen/par/top_timesim.sdf
+     -sdfroot  /uut
+     -simrunnum  0
+     -socket  52385
+
+Wed Jan 18 20:22:22 2023
+
+
+ Elaboration Time: 0.78125 sec
